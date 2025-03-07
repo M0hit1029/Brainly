@@ -1,0 +1,20 @@
+1.how delete works
+Yes, exactly! Here's the flow step-by-step:
+
+1️⃣ User clicks delete → deleteCard(id, fetchData) is triggered.
+2️⃣ API request is sent → The backend deletes the content.
+3️⃣ fetchData() is called → Fetches the latest data from the API.
+4️⃣ setData(response.data) updates the data state in Dashboard.
+5️⃣ State update triggers a re-render → React re-renders Dashboard.
+6️⃣ UI updates → The deleted item disappears from the screen.
+
+So, React updates the UI automatically because the component depends on data, and state changes trigger a re-render. 🎯🚀
+
+
+
+=> for controlled sharing just give a fiels of shared:true in content model
+
+=>navigator.clipboard.writeText //for copying in clipboard
+
+=>to prevent data to get updated in shared link we have use localstorage to store initial 
+    data and even tough data gets updated we do not change it if lcal storage is already occupied
